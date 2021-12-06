@@ -1,0 +1,8 @@
+fundo {
+    background-image: url('../img/background_image.jpg');
+    background-size: 100%;
+    border-radius: 15px;
+    height: 260px;
+    padding-right: 10px;
+    margin-right: 5px;
+}

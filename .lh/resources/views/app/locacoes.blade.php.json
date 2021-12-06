@@ -1,0 +1,18 @@
+{
+    "sourceFile": "resources/views/app/locacoes.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1638407831813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1638407831813,
+            "name": "Commit-0",
+            "content": "@extends('layouts.app')\n\n@section('content')\n   <cadastro-locacoes></cadastro-locacoes>\n@endsection\n"
+        }
+    ]
+}

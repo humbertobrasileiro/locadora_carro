@@ -1,0 +1,106 @@
+{
+    "sourceFile": "resources/js/components/Table.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1638543674390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638802561742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,13 +54,13 @@\n     export default {\n         props: ['dados', 'visualizar', 'atualizar', 'remover', 'titulos', 'path'],\n         methods: {\n             setStore(obj) {\n-                console.log('obj:', obj)\n                 this.$store.state.transacao.status = ''\n                 this.$store.state.transacao.mensagem = ''\n                 this.$store.state.transacao.dados = ''\n                 this.$store.state.item = obj\n+                console.log('obj:', this.$store.state.item)\n             }\n         },\n         computed: {\n             dadosFiltrados() {\n"
+                },
+                {
+                    "date": 1638806191914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,8 +59,11 @@\n                 this.$store.state.transacao.mensagem = ''\n                 this.$store.state.transacao.dados = ''\n                 this.$store.state.item = obj\n                 console.log('obj:', this.$store.state.item)\n+                obj.forEach(e => {\n+                    console.log(e)\n+                });\n             }\n         },\n         computed: {\n             dadosFiltrados() {\n"
+                },
+                {
+                    "date": 1638806232838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n                 this.$store.state.transacao.mensagem = ''\n                 this.$store.state.transacao.dados = ''\n                 this.$store.state.item = obj\n                 console.log('obj:', this.$store.state.item)\n-                obj.forEach(e => {\n+                array.forEach(obj, e => {\n                     console.log(e)\n                 });\n             }\n         },\n"
+                },
+                {
+                    "date": 1638806419261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,10 +59,10 @@\n                 this.$store.state.transacao.mensagem = ''\n                 this.$store.state.transacao.dados = ''\n                 this.$store.state.item = obj\n                 console.log('obj:', this.$store.state.item)\n-                array.forEach(obj, e => {\n-                    console.log(e)\n+                obj.forEach((v, i, a) => {\n+                    console.log(v, i, a)\n                 });\n             }\n         },\n         computed: {\n"
+                },
+                {
+                    "date": 1638806583529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,11 +59,12 @@\n                 this.$store.state.transacao.mensagem = ''\n                 this.$store.state.transacao.dados = ''\n                 this.$store.state.item = obj\n                 console.log('obj:', this.$store.state.item)\n-                obj.forEach((v, i, a) => {\n-                    console.log(v, i, a)\n-                });\n+\n+                obj.map((item, chave) => {\n+                    console.log(item, chave)\n+                })\n             }\n         },\n         computed: {\n             dadosFiltrados() {\n"
+                },
+                {
+                    "date": 1638806611913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n                 this.$store.state.transacao.dados = ''\n                 this.$store.state.item = obj\n                 console.log('obj:', this.$store.state.item)\n \n-                obj.map((item, chave) => {\n+                this.$store.state.item.map((item, chave) => {\n                     console.log(item, chave)\n                 })\n             }\n         },\n"
+                },
+                {
+                    "date": 1638806754730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,11 +60,13 @@\n                 this.$store.state.transacao.dados = ''\n                 this.$store.state.item = obj\n                 console.log('obj:', this.$store.state.item)\n \n-                this.$store.state.item.map((item, chave) => {\n-                    console.log(item, chave)\n-                })\n+                let itens = Object.keys(this.$store.state.item)\n+\n+                itens.forEach(item => {\n+                    console.log(item)\n+                });\n             }\n         },\n         computed: {\n             dadosFiltrados() {\n"
+                },
+                {
+                    "date": 1638806794393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n \n                 let itens = Object.keys(this.$store.state.item)\n \n                 itens.forEach(item => {\n-                    console.log(item)\n+                    console.log(item.valueOf)\n                 });\n             }\n         },\n         computed: {\n"
+                },
+                {
+                    "date": 1638806823555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n \n                 let itens = Object.keys(this.$store.state.item)\n \n                 itens.forEach(item => {\n-                    console.log(item.valueOf)\n+                    console.log(item.value)\n                 });\n             }\n         },\n         computed: {\n"
+                },
+                {
+                    "date": 1638806873147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,10 +62,10 @@\n                 console.log('obj:', this.$store.state.item)\n \n                 let itens = Object.keys(this.$store.state.item)\n \n-                itens.forEach(item => {\n-                    console.log(item.value)\n+                itens.forEach((item, value) => {\n+                    console.log(item, value)\n                 });\n             }\n         },\n         computed: {\n"
+                },
+                {
+                    "date": 1638807285033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                     })\n \n                     dadosFiltrados.push(itemFiltrado)\n                 })\n-\n+                console.log(dadosFiltrados)\n                 return dadosFiltrados\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1638807517685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,10 +62,10 @@\n                 console.log('obj:', this.$store.state.item)\n \n                 let itens = Object.keys(this.$store.state.item)\n \n-                itens.forEach((item, value) => {\n-                    console.log(item, value)\n+                itens.forEach(item => {\n+                    console.log('tipo-> ', this.titulos[item])\n                 });\n             }\n         },\n         computed: {\n@@ -88,9 +88,8 @@\n                     })\n \n                     dadosFiltrados.push(itemFiltrado)\n                 })\n-                console.log(dadosFiltrados)\n                 return dadosFiltrados\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1638807644269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,11 @@\n \n                 let itens = Object.keys(this.$store.state.item)\n \n                 itens.forEach(item => {\n-                    console.log('tipo-> ', this.titulos[item])\n+                    if (this.titulos[item].tipo === 'data') {\n+                        console.log('tipo-> ', this.titulos[item])\n+                    }\n                 });\n             }\n         },\n         computed: {\n"
+                },
+                {
+                    "date": 1638807739950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,12 +61,14 @@\n                 this.$store.state.item = obj\n                 console.log('obj:', this.$store.state.item)\n \n                 let itens = Object.keys(this.$store.state.item)\n-\n+                let d = ''\n                 itens.forEach(item => {\n                     if (this.titulos[item].tipo === 'data') {\n-                        console.log('tipo-> ', this.titulos[item])\n+\n+                        d = this.store.state.item[item].format('d-m-Y')\n+                        console.log('tipo-> ', this.titulos[item], d)\n                     }\n                 });\n             }\n         },\n"
+                },
+                {
+                    "date": 1638807768078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n                 let d = ''\n                 itens.forEach(item => {\n                     if (this.titulos[item].tipo === 'data') {\n \n-                        d = this.store.state.item[item].format('d-m-Y')\n+                        d = this.$store.state.item[item].format('d-m-Y')\n                         console.log('tipo-> ', this.titulos[item], d)\n                     }\n                 });\n             }\n"
+                },
+                {
+                    "date": 1638807850403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n                 let d = ''\n                 itens.forEach(item => {\n                     if (this.titulos[item].tipo === 'data') {\n \n-                        d = this.$store.state.item[item].format('d-m-Y')\n+                        d = this.$store.state.item[item].toISOString().split(' ')[0]\n                         console.log('tipo-> ', this.titulos[item], d)\n                     }\n                 });\n             }\n"
+                },
+                {
+                    "date": 1638807907737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n                 let d = ''\n                 itens.forEach(item => {\n                     if (this.titulos[item].tipo === 'data') {\n \n-                        d = this.$store.state.item[item].toISOString().split(' ')[0]\n+                        d = formDataTempG(this.$store.state.item[item])\n                         console.log('tipo-> ', this.titulos[item], d)\n                     }\n                 });\n             }\n"
+                },
+                {
+                    "date": 1638807929346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n                 let d = ''\n                 itens.forEach(item => {\n                     if (this.titulos[item].tipo === 'data') {\n \n-                        d = formDataTempG(this.$store.state.item[item])\n+                        d = $formDataTempG(this.$store.state.item[item])\n                         console.log('tipo-> ', this.titulos[item], d)\n                     }\n                 });\n             }\n"
+                },
+                {
+                    "date": 1638807976621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n                 let d = ''\n                 itens.forEach(item => {\n                     if (this.titulos[item].tipo === 'data') {\n \n-                        d = $formDataTempG(this.$store.state.item[item])\n+                        d = this.$store.state.item[item] | formDataTempG\n                         console.log('tipo-> ', this.titulos[item], d)\n                     }\n                 });\n             }\n"
+                },
+                {
+                    "date": 1638808121940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,14 @@\n                 let d = ''\n                 itens.forEach(item => {\n                     if (this.titulos[item].tipo === 'data') {\n \n-                        d = this.$store.state.item[item] | formDataTempG\n+                        d = this.$store.state.item[item]\n+\n+                        if (d.includes(' ')) {\n+\n+                            d = d.split(' ')\n+                        }\n                         console.log('tipo-> ', this.titulos[item], d)\n                     }\n                 });\n             }\n"
+                },
+                {
+                    "date": 1638808177875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,9 @@\n \n                         if (d.includes(' ')) {\n \n                             d = d.split(' ')\n+                            this.$store.state.item[item] = d[0]\n                         }\n                         console.log('tipo-> ', this.titulos[item], d)\n                     }\n                 });\n"
+                },
+                {
+                    "date": 1638808300150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,10 +61,13 @@\n                 this.$store.state.item = obj\n                 console.log('obj:', this.$store.state.item)\n \n                 let itens = Object.keys(this.$store.state.item)\n+\n                 let d = ''\n+\n                 itens.forEach(item => {\n+\n                     if (this.titulos[item].tipo === 'data') {\n \n                         d = this.$store.state.item[item]\n \n@@ -72,10 +75,10 @@\n \n                             d = d.split(' ')\n                             this.$store.state.item[item] = d[0]\n                         }\n-                        console.log('tipo-> ', this.titulos[item], d)\n                     }\n+\n                 });\n             }\n         },\n         computed: {\n"
+                }
+            ],
+            "date": 1638543674390,
+            "name": "Commit-0",
+            "content": "<template>\n    <div class=\"row\">\n        <table class=\"table table-hover\">\n            <thead>\n                <tr>\n                    <th scope=\"col\" v-for=\"(t,key) in titulos\" :key=\"key\" >{{ t.titulo }}</th>\n                    <th v-if=\"visualizar.view || atualizar.view || remover.view\"></th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr v-for=\"obj, chave in dadosFiltrados\" :key=\"chave\">\n                    <td v-for=\"valor, chaveValor in obj\" :key=\"chaveValor\">\n                        <span v-if=\"titulos[chaveValor].tipo == 'texto'\">{{ valor }}</span>\n                        <span v-if=\"titulos[chaveValor].tipo == 'data'\">{{ valor | formDataTempG }}</span>\n                        <span v-if=\"titulos[chaveValor].tipo == 'checkbox'\">{{ valor }}</span>\n                        <span v-if=\"titulos[chaveValor].tipo == 'boolean'\">{{ valor == 1 ? 'Sim' : 'Não'}}</span>\n                        <span v-if=\"titulos[chaveValor].tipo == 'imagem'\">\n                            <img :src=\"path + valor\" width=\"50\" height=\"auto\">\n                        </span>\n                    </td>\n                    <td v-if=\"visualizar.view || atualizar.view || remover.view\">\n                        <button\n                            v-if=\"visualizar.view\"\n                            class=\"btn btn-outline-secondary btn-sm\"\n                            :data-toggle=\"visualizar.toggle\"\n                            :data-target=\"visualizar.target\"\n                            @click=\"setStore(obj)\">\n                            Visualizar\n                        </button>\n                        <button\n                            v-if=\"atualizar.view\"\n                            class=\"btn btn-outline-primary btn-sm\"\n                            :data-toggle=\"atualizar.toggle\"\n                            :data-target=\"atualizar.target\"\n                            @click=\"setStore(obj)\">\n                            Atualizar\n                        </button>\n                        <button\n                            v-if=\"remover.view\"\n                            class=\"btn btn-outline-danger btn-sm\"\n                            :data-toggle=\"remover.toggle\"\n                            :data-target=\"remover.target\"\n                            @click=\"setStore(obj)\">\n                            Remover\n                        </button>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</template>\n\n<script>\n    export default {\n        props: ['dados', 'visualizar', 'atualizar', 'remover', 'titulos', 'path'],\n        methods: {\n            setStore(obj) {\n                console.log('obj:', obj)\n                this.$store.state.transacao.status = ''\n                this.$store.state.transacao.mensagem = ''\n                this.$store.state.transacao.dados = ''\n                this.$store.state.item = obj\n            }\n        },\n        computed: {\n            dadosFiltrados() {\n\n                let campos = Object.keys(this.titulos)\n\n                let dadosFiltrados = []\n\n                this.dados.map((item, chave) => {\n                    let itemFiltrado = {}\n\n                    campos.forEach(campo => {\n\n                        if (campo == 'chave') {\n                            itemFiltrado[campo] = chave\n                        } else {\n                            itemFiltrado[campo] = item[campo]\n                        }\n                    })\n\n                    dadosFiltrados.push(itemFiltrado)\n                })\n\n                return dadosFiltrados\n            }\n        }\n    }\n</script>\n"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "resources/css/app.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1638446638023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638446810301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-.fundo {\n+#fundo {\n     background-image: url('../img/background_image.jpg');\n     background-size: 100%;\n     border-radius: 15px;\n     height: 260px;\n"
+                },
+                {
+                    "date": 1638446838774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-#fundo {\n+fundo {\n     background-image: url('../img/background_image.jpg');\n     background-size: 100%;\n     border-radius: 15px;\n     height: 260px;\n"
+                },
+                {
+                    "date": 1638446852129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-fundo {\n+.fundo {\n     background-image: url('../img/background_image.jpg');\n     background-size: 100%;\n     border-radius: 15px;\n     height: 260px;\n"
+                },
+                {
+                    "date": 1638447028373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +0,0 @@\n-.fundo {\n-    background-image: url('../img/background_image.jpg');\n-    background-size: 100%;\n-    border-radius: 15px;\n-    height: 260px;\n-    padding-right: 10px;\n-    margin-right: 5px;\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638451179725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,26 @@\n+.fundo_tela {\n+    background-image: url('../img/background.png');\n+    background-size: cover;\n+    background-repeat: no-repeat;\n+    border-radius: 15px;\n+    padding-right: 10px;\n+    margin-right: 5px;\n+}\n \n+.fundo_topo {\n+    background-image: url('../img/fundo_top.png');\n+    background-size: contain;\n+    background-repeat: no-repeat;\n+    border-radius: 15px;\n+    padding-right: 10px;\n+    margin-right: 5px;\n+}\n+\n+.fundo_app {\n+    background-image: url('../img/background_image.jpg');\n+    background-size: 100%;\n+    border-radius: 15px;\n+    height: 260px;\n+    padding-right: 10px;\n+    margin-right: 5px;\n+}\n"
+                },
+                {
+                    "date": 1638451222130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +0,0 @@\n-.fundo_tela {\n-    background-image: url('../img/background.png');\n-    background-size: cover;\n-    background-repeat: no-repeat;\n-    border-radius: 15px;\n-    padding-right: 10px;\n-    margin-right: 5px;\n-}\n-\n-.fundo_topo {\n-    background-image: url('../img/fundo_top.png');\n-    background-size: contain;\n-    background-repeat: no-repeat;\n-    border-radius: 15px;\n-    padding-right: 10px;\n-    margin-right: 5px;\n-}\n-\n-.fundo_app {\n-    background-image: url('../img/background_image.jpg');\n-    background-size: 100%;\n-    border-radius: 15px;\n-    height: 260px;\n-    padding-right: 10px;\n-    margin-right: 5px;\n-}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638446638023,
+            "name": "Commit-0",
+            "content": ".fundo {\n    background-image: url('../img/background_image.jpg');\n    background-size: 100%;\n    border-radius: 15px;\n    height: 260px;\n    padding-right: 10px;\n    margin-right: 5px;\n}\n"
+        }
+    ]
+}

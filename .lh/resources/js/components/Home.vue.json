@@ -1,0 +1,38 @@
+{
+    "sourceFile": "resources/js/components/Home.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1638446743476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638447213396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\n     <div class=\"container\">\n         <div class=\"row justify-content-center\">\n-            <div class=\"col-md-8 fundo\">\n+            <div class=\"col-md-8 fundo_app\">\n                 <div class=\"card\">\n                     <div class=\"card-header\">Painel de Controle</div>\n \n                     <div class=\"card-body\">\n"
+                },
+                {
+                    "date": 1638447246048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\n-    <div class=\"container\">\n+    <div class=\"container  fundo_app\">\n         <div class=\"row justify-content-center\">\n-            <div class=\"col-md-8 fundo_app\">\n+            <div class=\"col-md-8\">\n                 <div class=\"card\">\n                     <div class=\"card-header\">Painel de Controle</div>\n \n                     <div class=\"card-body\">\n"
+                },
+                {
+                    "date": 1638447274374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-    <div class=\"container  fundo_app\">\n+    <div class=\"container\">\n         <div class=\"row justify-content-center\">\n             <div class=\"col-md-8\">\n                 <div class=\"card\">\n                     <div class=\"card-header\">Painel de Controle</div>\n"
+                },
+                {
+                    "date": 1638450980166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-    <div class=\"container\">\n+    <div class=\"container fundo_topo\">\n         <div class=\"row justify-content-center\">\n             <div class=\"col-md-8\">\n                 <div class=\"card\">\n                     <div class=\"card-header\">Painel de Controle</div>\n"
+                },
+                {
+                    "date": 1638451072184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-    <div class=\"container fundo_topo\">\n+    <div class=\"container\">\n         <div class=\"row justify-content-center\">\n             <div class=\"col-md-8\">\n                 <div class=\"card\">\n                     <div class=\"card-header\">Painel de Controle</div>\n"
+                }
+            ],
+            "date": 1638446743476,
+            "name": "Commit-0",
+            "content": "<template>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-8 fundo\">\n                <div class=\"card\">\n                    <div class=\"card-header\">Painel de Controle</div>\n\n                    <div class=\"card-body\">\n                        <p>Apresentar indicadores do sistema</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n\n<script>\n\n</script>\n"
+        }
+    ]
+}

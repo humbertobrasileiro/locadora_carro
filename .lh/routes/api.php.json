@@ -1,0 +1,18 @@
+{
+    "sourceFile": "routes/api.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1638475861730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1638475861730,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Http\\Request;\nuse Illuminate\\Support\\Facades\\Route;\n\n/*\n|--------------------------------------------------------------------------\n| API Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register API routes for your application. These\n| routes are loaded by the RouteServiceProvider within a group which\n| is assigned the \"api\" middleware group. Enjoy building your API!\n|\n*/\n\nRoute::middleware('auth:api')->get('/user', function (Request $request) {\n    return $request->user();\n});\n\n//Route::resource('cliente', 'App\\Http\\Controllers\\ClienteController');\nRoute::prefix('v1')->middleware('jwt.auth')->group(function() {\n    Route::post('me', 'App\\Http\\Controllers\\AuthController@me');\n    Route::post('logout', 'App\\Http\\Controllers\\AuthController@logout');\n\n    Route::apiResource('cliente', 'App\\Http\\Controllers\\ClienteController');\n    Route::get('clientes', 'App\\Http\\Controllers\\ClienteController@listAll');\n\n    Route::apiResource('carro', 'App\\Http\\Controllers\\CarroController');\n    Route::get('carros', 'App\\Http\\Controllers\\CarroController@listAll');\n\n    Route::apiResource('locacao', 'App\\Http\\Controllers\\LocacaoController');\n    Route::get('locacoes', 'App\\Http\\Controllers\\LocacaoController@listAll');\n\n    Route::apiResource('marca', 'App\\Http\\Controllers\\MarcaController');\n    Route::get('marcas', 'App\\Http\\Controllers\\MarcaController@listAll');\n\n    Route::apiResource('modelo', 'App\\Http\\Controllers\\ModeloController');\n    Route::get('modelos', 'App\\Http\\Controllers\\ModeloController@listAll');\n});\n\nRoute::post('login', 'App\\Http\\Controllers\\AuthController@login');\nRoute::post('refresh', 'App\\Http\\Controllers\\AuthController@refresh');\n\n"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+<template>
+    <
+  components: { InputContainer },div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Busca de Marcas</div>
+
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="col mb-3">
+                                <input-container-component
+                                    id="inputID"
+                                    titulo="ID"
+                                    idHelp="idHelp"
+                                    textoAjuda="Opcional. Informe o ID da marca"
+                                >
+                                </input-container-component>
+                                <input type="number" class="form-control" id="inputID" aria-describedby="idHelp" placeholder="ID">
+                            </div>
+                            <div class="col mb-3">
+                                <label for="inputNome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="inputNome" aria-describedby="nomeHelp" placeholder="Nome da marca">
+                                <div id="nomeHelp" class="form-text text-muted">Opcional. Informe o nome da marca</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm float-right">Pesquisar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import InputContainer from './InputContainer.vue';
+</script>

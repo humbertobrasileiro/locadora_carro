@@ -1,0 +1,39 @@
+.fundo_tela {
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+.fundo_topo {
+    background-image: url('../img/fundo_top.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+.fundo_app {
+    background-image: url('../img/background_image.jpg');
+    background-size: 100%;
+    border-radius: 15px;
+    height: 260px;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+.locadora {
+    background-image: url('../img/locadora.jpg');
+    background-size: 100%;
+    border-radius: 15px;
+    height: 260px;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+.bg-navegador {
+    background-color: darkcyan !important;
+}

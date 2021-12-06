@@ -1,0 +1,8 @@
+.destaque1{
+    background-image: url('/public/img/Modelos/Fiat\ Grand\ Siena.png');
+    background-size: 100%;
+    border-radius: 15px;
+    height: 260px;
+    padding-right: 10px;
+    margin-right: 5px;
+}

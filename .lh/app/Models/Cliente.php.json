@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/Models/Cliente.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1638405425440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1638405425440,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Cliente extends Model\n{\n    use HasFactory;\n\n    protected $table = 'clientes';\n    protected $fillable = ['nome', 'telefone', 'celular', 'cpf', 'email'];\n\n    public function rules() {\n        return [\n            'nome' => 'required|unique:clientes,nome,'.$this->id.'|min:3',\n            'email' => 'required'\n        ];\n    }\n\n    public function feedback() {\n        return [\n            'required' => 'O campo :attribute é obrigatório',\n            'nome.unique' => 'O cliente informado já existe',\n            'nome.min' => 'O nome deve ter no mínimo 3 caracteres'\n        ];\n    }\n\n    public function locacoes() {\n        return $this->hasMany('App\\Models\\Locacao', 'cliente_id', 'id');\n    }\n\n}\n"
+        }
+    ]
+}

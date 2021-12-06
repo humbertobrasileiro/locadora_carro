@@ -1,0 +1,22 @@
+{
+    "sourceFile": "resources/js/components/Modal.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1638451106230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638470320792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\n     <!-- Modal -->\n     <div class=\"modal fade\" :id=\"id\" tabindex=\"-1\" :aria-labelledby=\"id + 'ModalLabel'\" aria-hidden=\"true\">\n         <div :class=\"janela\">\n-            <div class=\"modal-content fundo_topo\">\n+            <div class=\"modal-content\">\n                 <div class=\"modal-header\">\n                     <h5 class=\"modal-title\" id=\"exampleModalLabel\">{{ titulo }}</h5>\n                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                     <span aria-hidden=\"true\">&times;</span>\n"
+                }
+            ],
+            "date": 1638451106230,
+            "name": "Commit-0",
+            "content": "<template>\n    <!-- Modal -->\n    <div class=\"modal fade\" :id=\"id\" tabindex=\"-1\" :aria-labelledby=\"id + 'ModalLabel'\" aria-hidden=\"true\">\n        <div :class=\"janela\">\n            <div class=\"modal-content fundo_topo\">\n                <div class=\"modal-header\">\n                    <h5 class=\"modal-title\" id=\"exampleModalLabel\">{{ titulo }}</h5>\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                    </button>\n                </div>\n                <div class=\"modal-body\">\n                    <!-- Alertas -->\n                    <slot name=\"alertas\"></slot>\n                    <slot name=\"conteudo\"></slot>\n                </div>\n                <div class=\"modal-footer\">\n                    <slot name=\"rodape\"></slot>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n\n<script>\n    export default {\n        props: ['id', 'titulo', 'tamanho'],\n        computed: {\n            janela() {\n                return 'modal-dialog modal-dialog-centered ' + this.tamanho\n            }\n        }\n    }\n</script>\n"
+        }
+    ]
+}
