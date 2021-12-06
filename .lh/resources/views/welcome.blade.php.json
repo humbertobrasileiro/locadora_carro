@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 40,
+            "activePatchIndex": 42,
             "patches": [
                 {
                     "date": 1638446518280,
@@ -168,6 +168,14 @@
                 {
                     "date": 1638815555722,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,9 +95,9 @@\n                             </div>\n \n                             <div class=\"ml-12\">\n                                 <div class=\"mt-2 text-gray-600 dark:text-gray-400 text-sm\">\n-                                    Faço a análise do seu projeto dentro das normas técnicas, estrutura e normatização do banco de dados, tempo de vida do projeto, sistema todo\n+                                    Faço a análise do seu projeto dentro das normas técnicas, estrutura e normatização do banco de dados, tempo de vida do projeto, sistema todo responsivo (Bootstrap) e com rotinas reutilizáveis\n                                 </div>\n                             </div>\n                         </div>\n                     </div>\n"
+                },
+                {
+                    "date": 1638816499790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,10 +109,10 @@\n                             <svg fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"-mt-px w-5 h-5 text-gray-400\">\n                                 <path d=\"M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z\"></path>\n                             </svg>\n \n-                            <a href=\"https://laravel.bigcartel.com\" class=\"ml-1 underline\">\n-                                Shop\n+                            <a href=\"humbertobrasileiro/locadora_carro\" class=\"ml-1 underline\">\n+                                github do projeto\n                             </a>\n \n                             <svg fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" class=\"ml-4 -mt-px w-5 h-5 text-gray-400\">\n                                 <path d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path>\n"
+                },
+                {
+                    "date": 1638816518494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,9 +109,9 @@\n                             <svg fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"-mt-px w-5 h-5 text-gray-400\">\n                                 <path d=\"M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z\"></path>\n                             </svg>\n \n-                            <a href=\"humbertobrasileiro/locadora_carro\" class=\"ml-1 underline\">\n+                            <a href=\"https://github.com/humbertobrasileiro/locadora_carro\" class=\"ml-1 underline\">\n                                 github do projeto\n                             </a>\n \n                             <svg fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" class=\"ml-4 -mt-px w-5 h-5 text-gray-400\">\n"
                 }
             ],
             "date": 1638446518280,
